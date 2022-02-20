@@ -1,0 +1,7 @@
+{{#Word}}
+	<div id="answer">{{Word}}</div>
+	<script>
+		var occluded = document.getElementById("answer").innerHTML
+		document.getElementById("answer").innerHTML = highlightText(window.randomPhrase, '**')
+	</script>
+{{/Word}}

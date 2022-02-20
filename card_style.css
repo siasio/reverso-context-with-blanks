@@ -1,0 +1,16 @@
+.card {
+ font-family: arial;
+ font-size: 20px;
+ text-align: center;
+ color: black;
+ background-color: white;
+}
+
+#hint { background: #f2fbe7; border: 1px solid #dff5c4; border-radius: 6px; color: #7a876b; }
+
+#hint.hidden:hover { background: #dff5c4; color: #000; cursor: pointer; }
+#hint.hidden .payload { display: none; }
+
+#hint.shown { background: #fff; color: #000; }
+#hint.shown .trigger { display: none; }
+#hint.shown .payload { display: block; }
