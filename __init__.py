@@ -75,6 +75,64 @@ def fetch_context_data(cur_word, target_lang, native_lang):
     return context_data, counter
 
 
+def add_reverso_notetype() -> None:
+    from aqt import mw
+    nt = mw.col.models.new('Cloze-reverso')
+    mw.col.models.addField(nt, WORD)
+    mw.col.models.addField(nt, CONTEXT)
+    mw.col.models.addTemplate(nt, """{{#Context}}
+	<span id="context">{{Context}}</span>
+	<br><br>
+	<div id="hint" class="hidden">
+		<p class="trigger">Check native language</p>
+		<p class="payload" id="hintpayload"></p>
+	</div>
+	<script type="text/javascript">
+		function highlightText(text, highlighter) {
+			textParts = text.split(highlighter);
+			return textParts[0] + '<span style="background-color:#dff5c4;">' + textParts[1] + "</span>" + textParts[2];
+		}
+		function occludeText(text, highlighter) {
+			textParts = text.split(highlighter);
+			return textParts[0] + '<span style="background-color:#fae7b5;">&lt;...&gt;</span>' + textParts[2];
+		}
+		var langData = document.getElementById("context").innerHTML.split("<br>----<br>");
+		var phrases = langData[1].split(",,");
+		var nativePhrases = langData[2].split(",,");
+		window.randomIndex = Math.floor(Math.random() * phrases.length);
+		window.randomPhrase = phrases[window.randomIndex];
+		document.getElementById("context").innerHTML = occludeText(window.randomPhrase, "**");
+		var natRandomPhrase = nativePhrases[window.randomIndex];
+		hint.addEventListener('click', function() { this.setAttribute('class', 'shown'); this.innerHTML = highlightText(natRandomPhrase, '**');});
+	</script>
+{{/Context}}
+
+{{#Word}}
+	<div id="answer">{{Word}}</div>
+	<script>
+		var occluded = document.getElementById("answer").innerHTML
+		document.getElementById("answer").innerHTML = highlightText(window.randomPhrase, '**')
+	</script>
+{{/Word}}
+
+.card {
+ font-family: arial;
+ font-size: 20px;
+ text-align: center;
+ color: black;
+ background-color: white;
+}
+
+#hint { background: #f2fbe7; border: 1px solid #dff5c4; border-radius: 6px; color: #7a876b; }
+
+#hint.hidden:hover { background: #dff5c4; color: #000; cursor: pointer; }
+#hint.hidden .payload { display: none; }
+
+#hint.shown { background: #fff; color: #000; }
+#hint.shown .trigger { display: none; }
+#hint.shown .payload { display: block; }""")
+
+
 def update_lang(lang, button, key) -> None:
     button.setIcon(QIcon(QPixmap(os.path.join(libfolder, f'flags/{lang}.png'))))
     config[key] = lang
@@ -174,5 +232,6 @@ def onFocusLost(flag, n, fidx):
     return True
 
 
+add_reverso_notetype()
 addHook('editFocusLost', onFocusLost)
 gui_hooks.editor_did_load_note.append(setup_switch_btn)
