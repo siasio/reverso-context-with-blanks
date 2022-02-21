@@ -7,12 +7,32 @@
 	</div>
 	<script type="text/javascript">
 		function highlightText(text, highlighter) {
-			textParts = text.split(highlighter);
-			return textParts[0] + '<span style="background-color:#dff5c4;">' + textParts[1] + "</span>" + textParts[2];
+			const textParts = text.split(highlighter);
+			var textToDisplay = " ";
+			var highlighted = false;
+			for (const part in textParts) {
+				if (highlighted) {
+					textToDisplay +=  '<span style="background-color:#dff5c4;">' +  textParts[part] + '</span> ';
+				} else {
+				textToDisplay += textParts[part];
+				}
+				highlighted = !highlighted;
+				}
+			return textToDisplay;
 		}
 		function occludeText(text, highlighter) {
-			textParts = text.split(highlighter);
-			return textParts[0] + '<span style="background-color:#fae7b5;">&lt;...&gt;</span>' + textParts[2];
+			const textParts = text.split(highlighter);
+			var textToDisplay = " ";
+			var highlighted = false;
+			for (const part in textParts) {
+				if (highlighted) {
+					textToDisplay +=  '<span style="background-color:#fae7b5;">&lt;...&gt;</span>';
+				} else {
+				textToDisplay += textParts[part];
+				}
+				highlighted = !highlighted;
+				}
+			return textToDisplay;
 		}
 		var langData = document.getElementById("context").innerHTML.split("<br>----<br>");
 		var phrases = langData[1].split(",,");
