@@ -1,5 +1,5 @@
 # reverso-context-with-blanks
- Anki add-on for getting sentences from reverso
+ Anki add-on for getting sentences from reverso. Download it into your anki from here: https://ankiweb.net/shared/info/680321806
 
 When adding new cards, you will get an option to automatically fetch a fixed number of sample sentences from the Reverso website (https://context.reverso.net/). To do so, just create a new card type with the word "reverso" in the type name, and fields "Word" and "Context". For such a card type, when you enter a word you are interested in in the "Word" field, and then click anywhere else (stop the mouse focus on this field), the sentences will automatically appear in the "Context" field.
 
