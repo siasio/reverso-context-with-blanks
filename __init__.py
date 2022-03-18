@@ -26,7 +26,7 @@ LANG_NAMES = {
     'en': 'English',
     'es': 'Spanish',
     'fr': 'French',
-    'il': 'Hebrew',
+    'he': 'Hebrew',
     'it': 'Italian',
     'ja': 'Japanese',
     'nl': 'Dutch',
