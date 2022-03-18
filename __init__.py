@@ -22,20 +22,21 @@ WORD = 'Word'
 LANGUAGES = config['shown_languages']
 LANG_NAMES = {
     'ar': 'Arabic',
-    'cn': 'Chinese',
     'de': 'German',
     'en': 'English',
     'es': 'Spanish',
     'fr': 'French',
     'il': 'Hebrew',
     'it': 'Italian',
-    'jp': 'Japanese',
+    'ja': 'Japanese',
     'nl': 'Dutch',
     'pl': 'Polish',
     'pt': 'Portuguese',
     'ro': 'Romanian',
     'ru': 'Russian',
-    'tr': 'Turkish'
+    'sv': 'Swedish',
+    'tr': 'Turkish',
+    'zh': 'Chinese'
 }
 LEARNED_LANG = "learned_language"
 NATIVE_LANG = "native_language"
