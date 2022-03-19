@@ -1,2 +1,2 @@
 from aqt import mw
-config = mw.addonManager.getConfig(__name__)
+config = mw.addonManager.getConfig("reversolocal")
