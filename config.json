@@ -2,5 +2,6 @@
 	"learned_language": "de",
 	"native_language": "ru",
 	"shown_languages": ["en", "de", "ru", "pl", "fr", "es", "it"],
-	"sample_phrases_number": 30
+	"sample_phrases_number": 30,
+	"available_languages": ["ar", "de", "en", "es", "fr", "he", "it", "ja", "nl", "pl", "pt", "ro", "ru", "sv", "tr", "zh"]
 }

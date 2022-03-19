@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f54973c-2eda-4c32-b305-4090ef8295e1" name="Changes" comment="" />
+    <list default="true" id="0f54973c-2eda-4c32-b305-4090ef8295e1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/definitions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/focus_lost.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/language_management.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25Po3yolqPjuXfNwS4KNVvRbt76" />
   <component name="ProjectViewState">
