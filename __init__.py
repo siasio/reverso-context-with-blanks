@@ -1,4 +1,3 @@
-from imports import *
 from aqt import gui_hooks
 # import all of the Qt GUI library
 #from anki import hooks
@@ -7,6 +6,7 @@ import os, sys
 
 libfolder = os.path.dirname(__file__)
 sys.path.insert(0, libfolder)
+from imports import *
 from card_template import add_reverso_notetype
 from language_management import setup_lang_buttons
 from focus_lost import onFocusLost

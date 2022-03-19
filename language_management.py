@@ -1,3 +1,7 @@
+import os, sys
+
+libfolder = os.path.dirname(__file__)
+sys.path.insert(0, libfolder)
 from imports import *
 from aqt.qt import *
 import aqt.editor
