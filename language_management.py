@@ -5,6 +5,8 @@ from aqt.editor import Editor
 from aqt.addcards import AddCards
 from aqt.editcurrent import EditCurrent
 from definitions import *
+config = mw.addonManager.getConfig(__name__)
+LANGUAGES = config['shown_languages']
 
 
 def update_lang(lang, button, key) -> None:
