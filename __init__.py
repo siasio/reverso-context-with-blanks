@@ -2,6 +2,7 @@ from aqt import gui_hooks
 # import all of the Qt GUI library
 #from anki import hooks
 from anki.hooks import addHook
+import os
 
 libfolder = os.path.dirname(__file__)
 sys.path.insert(0, libfolder)
