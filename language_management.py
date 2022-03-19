@@ -5,17 +5,19 @@ from aqt.editor import Editor
 from aqt.addcards import AddCards
 from aqt.editcurrent import EditCurrent
 from definitions import *
-config = mw.addonManager.getConfig(__name__)
-LANGUAGES = config['shown_languages']
 
 
-def update_lang(lang, button, key) -> None:
+def update_lang(lang, button, key, config) -> None:
     button.setIcon(QIcon(QPixmap(os.path.join(libfolder, f'flags/{lang}.png'))))
     config[key] = lang
     mw.addonManager.writeConfig(__name__, config)
 
 
 def setup_lang_buttons(editor: Editor):
+    from aqt import mw
+    config = mw.addonManager.getConfig(__name__)
+    LANGUAGES = config['shown_languages']
+
     if hasattr(editor, "parentWindow") and isinstance(editor.parentWindow, AddCards):
         win = aqt.dialogs._dialogs["AddCards"][1]
     elif hasattr(editor, "parentWindow") and isinstance(editor.parentWindow, EditCurrent):
@@ -41,7 +43,7 @@ def setup_lang_buttons(editor: Editor):
     for lang in LANGUAGES:
         lang_path = os.path.join(libfolder, f'flags/{lang}.png')
         action = QAction(QIcon(lang_path), LANG_NAMES[lang].capitalize(), win)
-        action.triggered.connect(lambda chk, lang=lang, win=win: update_lang(lang, lang_button, LEARNED_LANG))
+        action.triggered.connect(lambda chk, lang=lang, win=win: update_lang(lang, lang_button, LEARNED_LANG, config))
         lang_menu.addAction(action)
     box.layout().insertWidget(0, lang_label)
     box.layout().insertWidget(1, lang_button)
@@ -57,7 +59,7 @@ def setup_lang_buttons(editor: Editor):
     for lang in LANGUAGES:
         lang_path = os.path.join(libfolder, f'flags/{lang}.png')
         action = QAction(QIcon(lang_path), LANG_NAMES[lang].capitalize(), win)
-        action.triggered.connect(lambda chk, lang=lang, win=win: update_lang(lang, nat_button, NATIVE_LANG))
+        action.triggered.connect(lambda chk, lang=lang, win=win: update_lang(lang, nat_button, NATIVE_LANG, config))
         nat_menu.addAction(action)
     box.layout().insertWidget(2, nat_label)
     box.layout().insertWidget(3, nat_button)
