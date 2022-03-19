@@ -1,3 +1,4 @@
+from imports import *
 from aqt import gui_hooks
 # import all of the Qt GUI library
 #from anki import hooks

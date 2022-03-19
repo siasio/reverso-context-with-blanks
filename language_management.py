@@ -1,4 +1,4 @@
-from aqt import mw
+from imports import *
 from aqt.qt import *
 import aqt.editor
 from aqt.editor import Editor
@@ -14,8 +14,6 @@ def update_lang(lang, button, key, config) -> None:
 
 
 def setup_lang_buttons(editor: Editor):
-    from aqt import mw
-    config = mw.addonManager.getConfig(__name__)
     LANGUAGES = config['shown_languages']
 
     if hasattr(editor, "parentWindow") and isinstance(editor.parentWindow, AddCards):

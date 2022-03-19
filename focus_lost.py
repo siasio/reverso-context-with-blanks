@@ -1,3 +1,4 @@
+from imports import *
 from definitions import *
 from reverso_connect import fetch_context_data
 
