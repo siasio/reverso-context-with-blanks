@@ -2,13 +2,13 @@ import os, sys
 
 libfolder = os.path.dirname(__file__)
 sys.path.insert(0, libfolder)
-from __init__ import config
 from aqt.qt import *
 import aqt.editor
 from aqt.editor import Editor
 from aqt.addcards import AddCards
 from aqt.editcurrent import EditCurrent
 from definitions import *
+import reverso_anki_addon_name
 
 
 def update_lang(lang, button, key, config) -> None:

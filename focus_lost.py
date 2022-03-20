@@ -2,9 +2,9 @@ import os, sys
 
 libfolder = os.path.dirname(__file__)
 sys.path.insert(0, libfolder)
-from __init__ import config
 from definitions import *
 from reverso_connect import fetch_context_data
+import reverso_anki_addon_name
 
 
 def is_reverso_card(n):

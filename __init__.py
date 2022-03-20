@@ -6,7 +6,7 @@ import os, sys
 
 libfolder = os.path.dirname(__file__)
 sys.path.insert(0, libfolder)
-config = mw.addonManager.getConfig(__name__)
+reverso_anki_addon_name = __name__
 from card_template import add_reverso_notetype
 from language_management import setup_lang_buttons
 from focus_lost import onFocusLost
