@@ -4,7 +4,7 @@ libfolder = os.path.dirname(__file__)
 sys.path.insert(0, libfolder)
 from definitions import *
 from reverso_connect import fetch_context_data
-import reverso_anki_addon_name
+config = mw.addonManager.getConfig(reverso_anki_addon_name)
 
 
 def is_reverso_card(n):
