@@ -2,6 +2,7 @@ import os, sys
 
 libfolder = os.path.dirname(__file__)
 sys.path.insert(0, libfolder)
+from aqt import mw
 from aqt.qt import *
 import aqt.editor
 from aqt.editor import Editor

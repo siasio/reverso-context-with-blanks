@@ -2,6 +2,7 @@ import os, sys
 
 libfolder = os.path.dirname(__file__)
 sys.path.insert(0, libfolder)
+from aqt import mw
 from definitions import *
 from reverso_connect import fetch_context_data
 config = mw.addonManager.getConfig(reverso_anki_addon_name)
