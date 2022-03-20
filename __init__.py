@@ -1,4 +1,4 @@
-from aqt import gui_hooks
+from aqt import gui_hooks, mw
 # import all of the Qt GUI library
 #from anki import hooks
 from anki.hooks import addHook
@@ -6,7 +6,7 @@ import os, sys
 
 libfolder = os.path.dirname(__file__)
 sys.path.insert(0, libfolder)
-from imports import *
+config = mw.addonManager.getConfig(__name__)
 from card_template import add_reverso_notetype
 from language_management import setup_lang_buttons
 from focus_lost import onFocusLost
