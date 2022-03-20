@@ -9,7 +9,7 @@ from aqt.editor import Editor
 from aqt.addcards import AddCards
 from aqt.editcurrent import EditCurrent
 from definitions import *
-config = mw.addonManager.getConfig(reverso_anki_addon_name)
+config = mw.addonManager.getConfig(sys.modules[__name__])
 
 
 def update_lang(lang, button, key, config) -> None:
