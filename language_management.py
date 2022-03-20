@@ -9,7 +9,7 @@ from aqt.editor import Editor
 from aqt.addcards import AddCards
 from aqt.editcurrent import EditCurrent
 from definitions import *
-config = mw.addonManager.getConfig(sys.modules[__name__])
+config = mw.addonManager.getConfig(__name__)
 
 
 def update_lang(lang, button, key, config) -> None:
