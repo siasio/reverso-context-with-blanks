@@ -14,3 +14,8 @@
 #hint.shown { background: white; color: black; }
 #hint.shown .trigger { display: none; }
 #hint.shown .payload { display: block; }
+
+#typeans {
+ font-size: 44px !important;
+ text-align: center;
+}

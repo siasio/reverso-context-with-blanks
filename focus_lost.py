@@ -1,10 +1,7 @@
-import os, sys
 from aqt import mw
 config = mw.addonManager.getConfig(__name__)
-libfolder = os.path.dirname(__file__)
-sys.path.insert(0, libfolder)
-from definitions import *
-from reverso_connect import fetch_context_data
+from .definitions import *
+from .reverso_connect import fetch_context_data
 
 
 def is_reverso_card(n):

@@ -1,15 +1,12 @@
-import os, sys
 from aqt import mw
 config = mw.addonManager.getConfig(__name__)
 
-libfolder = os.path.dirname(__file__)
-sys.path.insert(0, libfolder)
 from aqt.qt import *
 import aqt.editor
 from aqt.editor import Editor
 from aqt.addcards import AddCards
 from aqt.editcurrent import EditCurrent
-from definitions import *
+from .definitions import *
 
 
 def update_lang(lang, button, key, config) -> None:

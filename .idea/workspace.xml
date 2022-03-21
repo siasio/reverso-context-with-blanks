@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f54973c-2eda-4c32-b305-4090ef8295e1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/back_template_typing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/card_style_typing.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front_template_typing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/card_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/card_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/card_template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/focus_lost.py" beforeDir="false" afterPath="$PROJECT_DIR$/focus_lost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imports.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/language_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/language_management.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +42,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programming\reverso-context-with-blanks" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
