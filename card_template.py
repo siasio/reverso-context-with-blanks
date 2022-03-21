@@ -41,5 +41,5 @@ def add_reverso_notetype() -> None:
 
 
 def add_reverso_typing_notetype() -> None:
-    add_notetype('Cloze reverso T', 'front_template.html', 'back_template.html', 'card_style.css')
+    add_notetype('Cloze reverso T', 'front_template_typing.html', 'back_template_typing.html', 'card_style_typing.css')
 
