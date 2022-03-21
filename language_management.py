@@ -1,5 +1,9 @@
+import os, sys
 from aqt import mw
 config = mw.addonManager.getConfig(__name__)
+
+libfolder = os.path.dirname(__file__)
+sys.path.insert(0, libfolder)
 
 from aqt.qt import *
 import aqt.editor
